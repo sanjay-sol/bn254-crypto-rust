@@ -4,7 +4,7 @@ use num_traits::{One, Zero};
 use std::ops::{Add, Mul, Neg, Sub};
 
 lazy_static! {
-    static ref P: BigUint = BigUint::parse_bytes(
+    pub static ref P: BigUint = BigUint::parse_bytes(
         b"21888242871839275222246405745257275088548364400416034343698204186575808495617",
         10
     )

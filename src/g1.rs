@@ -1,5 +1,6 @@
 use crate::fp::Fp;
 use num_traits::Zero;
+
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub struct G1 {
     pub x: Fp,
@@ -53,7 +54,7 @@ impl G1 {
             - xx.clone()
             - yyyy.clone())
             + ((self.x.clone() + yy.clone()) * (self.x.clone() + yy.clone())
-                - xx.clone()
+                - xx.clone() 
                 - yyyy.clone()); // 2*S
         let m = xx.clone() + xx.clone() + xx.clone(); // 3*XX
         let x3 = m.clone() * m.clone() - s.clone() - s.clone();
